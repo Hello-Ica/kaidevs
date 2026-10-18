@@ -1,8 +1,6 @@
 <?php
 // for XAMPP (localhost)
-define('BASE_URL', '/kaidevs-website/'); 
-
-// for LIVE
-//define('BASE_URL', '/'); 
+$isLocal = in_array($_SERVER['HTTP_HOST'] ?? '', ['localhost', '127.0.0.1']);
+define('BASE_URL', $isLocal ? '/kaidevs-website/' : '/');
 
 ?>
